@@ -10,7 +10,9 @@
     <title>NTUST COMPUTER CLUB</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
     <script src="https://use.typekit.net/wyd4emv.js"></script>
     <script>
     try {
@@ -22,6 +24,85 @@
 </head>
 
 <body>
+    <div id="dark"></div>
+    <div id="toolman" class="lessonDetail">
+        <section id="intro" class="main">
+            <h1 class="chinese">講師</h1>
+            <hr>
+            <div class="teacher">
+                <img src="images/toolmanTeacher.jpg">
+                <h2 class="chinese">曾增宇</h2>
+            </div>
+        </section>
+    </div>
+    <div id="python" class="lessonDetail">
+        <section id="intro" class="main">
+            <h1 class="chinese">講師</h1>
+            <hr>
+            <div class="teacher">
+                <img src="images/clubleader.jpg">
+                <h2 class="chinese">林詠翔</h2>
+            </div>
+            <div class="teacher">
+                <img src="images/pythonTeacher.jpg">
+                <h2 class="chinese">陳廷冠</h2>
+            </div>
+        </section>
+    </div>
+    <div id="javascript" class="lessonDetail">
+        <section id="intro" class="main">
+            <h1 class="chinese">講師</h1>
+            <hr>
+            <div class="teacher">
+                <img src="images/javascriptTeacher.jpg">
+                <h2 class="chinese">曾增宇</h2>
+            </div>
+        </section>
+    </div>
+    <div id="android" class="lessonDetail">
+        <section id="intro" class="main">
+            <h1 class="chinese">講師</h1>
+            <hr>
+            <div class="teacher">
+                <img src="images/androidTeacher.jpg">
+                <h2 class="chinese">楊宗儒</h2>
+            </div>
+        </section>
+    </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container transparent">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">NTUST Computer Club</a>
+            </div>
+            <!--  <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> -->
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
     <!-- Header -->
     <header id="header" class="alt">
         <div class="inner">
@@ -49,51 +130,55 @@
         <!-- Items -->
         <section class="main items">
             <article class="item">
-                <header>
-                    <a href="#"><img src="images/comingsoon.jpg" alt="" /></a>
+                <a href="#"><header value="toolman" class="lesson">
+                    <a><img src="images/comingsoon.jpg" alt="" /></a>
                     <h1 class="chinese">當個好工具人</h1>
-                </header>
+                </header></a>
                 <h2>9/28</h2>
                 <hr>
                 <p class="chinese">本堂課我們會教你如何正確拆裝一台電腦，以及一台電腦構成的必備物品。上完課後你將會對電腦有更深的認知，甚至如何組裝屬於自己的電腦。</p>
-                <li>電腦拆裝教學</li>
-                <li>電腦必備物品</li>
+                <li>電腦零件介紹</li>
                 <li>零件採買教學</li>
-                <!-- <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                </ul> -->
+                <li>電腦拆裝教學</li>
+                <hr>
+                <ul value="toolman" class="actions lesson">
+                    <li><a class="button chinese">講師</a></li>
+                </ul>
             </article>
             <article class="item">
-                <header>
-                    <a href="#"><img src="images/comingsoon.jpg" alt="" /></a>
+                <header value="python" class="lesson">
+                    <a><img src="images/comingsoon.jpg" alt="" /></a>
                     <h1>Python</h1>
                 </header>
                 <h2>10/5 ~ 11/30</h2>
                 <hr>
                 <p class="chinese">Python被譽為最適合新手學習的語言，這門課我們將由基礎教起，所以想學習程式但沒接觸過的人也非常歡迎。</p>
                 <li>Python 基礎</li>
+                <li>Python 資料處理</li>
                 <li>Python 爬蟲 & 宿舍斷網實戰</li>
                 <li>Python 進階</li>
-                <!-- <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                </ul> -->
+                <hr>
+                <ul value="python" class="actions lesson">
+                    <li><a class="button chinese">講師</a></li>
+                </ul>
             </article>
             <article class="item">
-                <header>
-                    <a href="#"><img src="images/comingsoon.jpg" alt="" /></a>
+                <header value="javascript" class="lesson">
+                    <a><img src="images/comingsoon.jpg" alt="" /></a>
                     <h1>Javascript</h1>
                 </header>
                 <h2>12/7 ~ 12/14</h2>
                 <hr>
                 <p class="chinese">Javascript是一種美麗又充滿彈性的語言，而且美麗的它總是無時無刻出現在你的網頁瀏覽器裡，快來這裡認識一下這神奇的語言吧！</p>
                 <li>Javascript 基礎介紹</li>
-                <!-- <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                </ul> -->
+                <hr>
+                <ul value="javascript" class="actions lesson">
+                    <li><a class="button chinese">講師</a></li>
+                </ul>
             </article>
             <article class="item">
-                <header>
-                    <a href="#"><img src="images/comingsoon.jpg" alt="" /></a>
+                <header value="android" class="lesson">
+                    <a><img src="images/comingsoon.jpg" alt="" /></a>
                     <h1>Android</h1>
                 </header>
                 <h2>12/21 ~ 12/28</h2>
@@ -101,9 +186,10 @@
                 <p class="chinese">用Android手機的各位，有沒有想過自己能設計出獨一無二的APP呢？我們這堂課將教給你進入APP殿堂的入場卷，讓你對Android APP能有基礎的概念。</p>
                 <li>Android 基礎介紹</li>
                 <li>APP Studio 介紹</li>
-                <!-- <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                </ul> -->
+                <hr>
+                <ul value="android" class="actions lesson">
+                    <li><a class="button chinese">講師</a></li>
+                </ul>
             </article>
         </section>
         <!-- CTA -->
@@ -129,7 +215,7 @@
             <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
         </section> -->
         <!-- Footer -->
-       <footer id="footer">
+        <footer id="footer">
             <!-- <ul class="icons">
                 <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
@@ -138,13 +224,15 @@
                 <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
             </ul> -->
             <!-- <p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p> -->
-        </footer> 
+        </footer>
     </div>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 
 </html>

@@ -2,8 +2,13 @@
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
+
 .chinese{
 	font-family: "source-han-sans-traditional";
+}
+
+.transparent{
+	opacity: : 0;
 }
 
 @font-face {

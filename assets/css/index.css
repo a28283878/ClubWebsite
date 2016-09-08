@@ -1,0 +1,36 @@
+.nounderline{
+	text-decoration: none;
+}
+
+.lessonDetail{
+	z-index: 3;
+	display: none;
+	position: fixed;
+	width: 60%;
+	height: 60%;
+	left:20%;
+	top:20%;
+}
+
+#dark{
+	z-index: 2;
+	background-color: gray;
+	display: none;
+	opacity: 0.5;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.teacher{
+	display: inline-block;
+	margin: 0 2.5em 0 2.5em;
+}
+
+.teacher img{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10%;
+	width:10em;
+	height: 10em;
+}
