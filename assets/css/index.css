@@ -24,7 +24,8 @@
 
 .teacher{
 	display: inline-block;
-	margin: 0 2.5em 0 2.5em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 .teacher img{
