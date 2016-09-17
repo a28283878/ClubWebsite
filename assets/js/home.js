@@ -1,10 +1,10 @@
-window.addEventListener("scroll", function() {
-    if (window.scrollY > 400) {
-        $('.navbar').fadeOut();
-    } else {
-        $('.navbar').fadeIn();
-    }
-}, false);
+// window.addEventListener("scroll", function() {
+//     if (window.scrollY > 400) {
+//         $('.navbar').fadeOut();
+//     } else {
+//         $('.navbar').fadeIn();
+//     }
+// }, false);
 
 window.addEventListener("scroll", function() {
     if(window.scrollY > 350) $('.section1').fadeTo(400, 1);
@@ -12,11 +12,20 @@ window.addEventListener("scroll", function() {
 
 $('.lesson').click(function(event) {
     var lessonId = "#" + $(this).attr('value');
+    $('.modal-close').addClass('visible');
+    $('#cancel').fadeIn();
     $(lessonId).fadeIn();
     $('#dark').fadeIn();
 })
 
 $('#dark').click(function() {
+	$('.modal-close').removeClass('visible');
+    $('.lessonDetail').fadeOut();
+    $('#dark').fadeOut();
+})
+
+$('.modal-close').click(function() {
+	$('.modal-close').removeClass('visible');
     $('.lessonDetail').fadeOut();
     $('#dark').fadeOut();
 })
