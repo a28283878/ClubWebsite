@@ -15,6 +15,7 @@ int insert(char* symbol);
 void create();
 int lookup(char* symbol);
 void dump(void);
+char *strupr(char *str);
 %}
 %x state
 %x string_state
@@ -149,3 +150,10 @@ int yywrap(void){
 	dump();
 	return -1;
 }  
+
+char *strupr(char *str){
+    char *orign=str;
+    for (; *str!='\0'; str++)
+        *str = toupper(*str);
+    return orign;
+}
