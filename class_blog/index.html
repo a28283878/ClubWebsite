@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+<script src="https://use.typekit.net/wyd4emv.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +40,8 @@
             }, 4000);
         });
     });
+
+
 
     function runEffect(number){ 
         var directions = ['left','up'];
@@ -84,11 +88,10 @@
         margin: 0;
     }
 
-    .col-lg-4{
-        padding: 0;
-    }
+    .col-md-4{
+        padding: 0;    }
 
-    .col-lg-4 .image{
+    .col-md-4 .image{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -139,13 +142,13 @@
     }
 
     .container:hover .middle .fa-chevron-left{
-        transform: translate(-50%, 0);
-        -ms-transform: translate(-50%,0); 
+        transform: translate(-100%, 0);
+        -ms-transform: translate(-100%,0); 
     }
     
     .container:hover .middle .fa-chevron-right{
-        transform: translate(50%, 0);
-        -ms-transform: translate(50%,0); 
+        transform: translate(100%, 0);
+        -ms-transform: translate(100%,0); 
     }
     
     .container:hover .middle .enter{
@@ -163,13 +166,11 @@
     }
 
     .middle-down {
-        transition: .5s ease;
-        opacity: 1;
         position: absolute;
         top: 80%;
         left: 50%;
-        width: 150px;
-        min-width: 30%; 
+        width: 50px;
+        min-width: 20%; 
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
     }
@@ -218,10 +219,33 @@
       font-size: 16px;
       padding: 16px 32px;
     }
+
+    @media only screen and (max-width: 992px){
+        .middle{
+            opacity: 1;   
+            transform: translate(-50%, 100%);
+            -ms-transform: translate(-50%, 100%); 
+        }
+
+        .middle .fa-chevron-left{
+            transform: translate(-100%, 0);
+            -ms-transform: translate(-100%,0); 
+        }
+        
+        .middle .fa-chevron-right{
+            transform: translate(100%, 0);
+            -ms-transform: translate(100%,0); 
+        }
+        
+        .middle .enter{
+            transform: translate(0, -50%);
+            -ms-transform: translate(0,-50%); 
+        }
+    }
 </style>
 <body>
     <div class="row">
-        <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top topper nav-modified">
+        <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top topper nav-modified" style="z-index: 10002;">
           <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -241,7 +265,7 @@
             </div>
           </div>
         </nav>
-        <a href="#"><div class="col-lg-4" style="height: 100%;">
+        <a href="./ntu/index.html"><div class="col-md-4" style="height: 100%;">
             <div class="container">
                 <img src="img/ntust1.jpg" alt="Avatar" class="0 image">
                 <img src="img/ntust2.jpg" alt="Avatar" class="1 image">
@@ -263,7 +287,7 @@
                 </div>
             </div>            
         </div></a>
-        <a href="#"><div class="col-lg-4" style="height: 100%;">
+        <a href="./ntu/index.html"><div class="col-md-4" style="height: 100%;">
             <div class="container">
                 <img src="img/workshop.jpg" alt="Avatar" class="0 image">
                 <img src="img/home-bg.jpg" alt="Avatar" class="1 image">
@@ -285,7 +309,7 @@
                 </div>
             </div>            
         </div></a>
-        <a href="#"><div class="col-lg-4" style="height: 100%;">
+        <a href="./ntu/index.html"><div class="col-md-4" style="height: 100%;">
             <div class="container">
                 <img src="img/workshop.jpg" alt="Avatar" class="0 image">
                 <img src="img/home-bg.jpg" alt="Avatar" class="1 image">
@@ -308,6 +332,8 @@
             </div>            
         </div></a>
     </div>
+    
+    
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

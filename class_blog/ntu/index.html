@@ -3,7 +3,7 @@
 
 <head>
     <script src="https://use.typekit.net/wyd4emv.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,18 @@
 
     <title>Clean Blog</title>
 
+        <!-- jQuery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+
+    <!-- Theme JavaScript -->
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,16 +44,87 @@
 
 </head>
 <style type="text/css">
-    .chinese{
-        font-family: ".tk-source-han-sans-traditional";
+    h1,h2,h3{
+        font-family: "source-han-sans-traditional";
+    }
+
+    .middle {
+        position: absolute;
+        transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+    }
+    
+    .downward{
+        -webkit-animation-name: downward; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+        animation-name: downward;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes downward {
+        0% {transform: translate(0, 0%);}
+        50% {transform: translate(0, -50%);}
+        100% {transform: translate(0, 0%);}
+    }
+
+    @media only screen and (max-width: 992px){
+        
+    }
+
+    @media screen and (min-width: 768px){
+        .carousel-caption {
+            right: 20%;
+            left: 20%;
+            padding-bottom: 30px;
+            top:50%;
+        }
+    }
+
+     @media screen and (max-width: 768px){
+        .middle{
+            opacity: 1;   
+            transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+        }
+
+        .middle hr{
+            margin-top:4px;
+            margin-bottom: 4px;
+        }
+
+        .middle p{
+            margin-top:4px;
+            margin-bottom: 4px;
+        }
+
+        .downward{
+            display: none;
+        }
     }
 </style>
+<script type="text/javascript">
+    $( function(){
+        jQuery(document).ready(function() {
+            $('.carousel').carousel({
+              interval: 4000
+            });
+        });
+
+        $(".downward").click(function(){
+             $('html, body').animate({
+                scrollTop: $("#here").offset().top
+            }, 1500);
+        });
+    });
+    
+</script>
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+<!--     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -49,8 +132,6 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Class Blog</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -67,14 +148,86 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+    </nav> -->
+    <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top topper nav-modified" style="z-index: 10002;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="../index.html">Class Main</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a data-toggle="tab" href="#home">NTUST</a></li>
+                <li><a data-toggle="tab" href="#menu1">NCCU</a></li>
+                <li><a data-toggle="tab" href="#menu2">NTNU</a></li>
+            </ul>
+            
+        </div>
+      </div>
     </nav>
+    
+    <div class="row" style="width:100%; height:50px;"></div>
+    <div class="intro-heade" style="margin:0;"> 
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+              <a href="#"><img src="img/home-bg.jpg" alt="Chania">
+              <div class="carousel-caption middle">
+                <h1>台科大課程</h1>
+                <hr>
+                <p>台科大課程，都在這裡</p>
+                <span class="fa fa-chevron-down fa-2x downward" style="color:white" aria-hidden="true"></span>
+              </div></a>
 
+            </div>
+           <div class="item">
+               <a href="#"><img src="img/home-bg.jpg" alt="Chicago">
+              <div class="carousel-caption middle">
+                <h1>台科大課程</h1>
+                <hr>
+                <p>台科大課程，都在這裡</p>
+                <span class="fa fa-chevron-down fa-2x downward" style="color:white" aria-hidden="true"></span>
+              </div></a>
+            </div>
+
+            <div class="item">
+              <a href="#"><img src="img/home-bg.jpg" alt="New York">
+              <div class="carousel-caption middle">
+                <h1>台科大課程</h1>
+                <hr>
+                <p>台科大課程，都在這裡</p>
+                <span class="fa fa-chevron-down fa-2x downward" style="color:white" aria-hidden="true"></span>
+              </div></a>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <!-- <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -86,166 +239,177 @@
                 </div>
             </div>
         </div>
-    </header>
-    
-    <!-- Main Content -->
-    <div class="container col-lg-2 col-md-2 col-sm-10  col-xs-10 col-xs-offset-1" style="margin-top: 10px; border-style: solid; border-width: 1px; border-radius:20px; border-color:#aaa; background-color: #f8f8f8;">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <h2 class="post-title">
-                            Recent Class
-                    </h2>
+    </header> -->
+    <div id="here" class="row" style="margin:0;">
+        <div class="row" style="width:100%; height:50px;"></div>
+        <!-- Main Content -->
+        <div class="container col-md-2 col-sm-10 col-xs-10 col-xs-offset-1" style="margin-top: 10px; border-style: solid; border-width: 1px; border-radius:20px; border-color:#aaa; background-color: #f8f8f8;">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                    <div class="post-preview">
+                        <h2 class="post-title">
+                                最近課程
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <hr style="width: 100%; border-top: 1px solid #ccc;">
+                    </div>
+                    <div class="post-preview">
+                        <a href="post.html">
+                            <h3 class="post-title">
+                                設計版面課程
+                            </h3>
+                            <h3 class="post-subtitle">
+                                設計版面課程
+                            </h3>
+                        </a>
+                        <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
+                    </div>
+                    <hr style="border-top: 1px solid #ccc;">
+                    <div class="post-preview">
+                        <a href="post.html">
+                            <h3 class="post-title">
+                                編譯器好難
+                            </h3>
+                            <h3 class="post-subtitle">
+                                編譯器好難，第三次作業可以在難一點
+                            </h3>
+                        </a>
+                        <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
+                    </div>
+                    <hr style="border-top: 1px solid #ccc;">
+                    <div class="post-preview">
+                        <a href="post.html">
+                            <h3 class="post-title">
+                                假字假字
+                            </h3>
+                            <h3 class="post-subtitle">
+                                在這裡當個好的假字
+                            </h3>
+                        </a>
+                        <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
+                    </div>
+                    <hr style="border-top: 1px solid #ccc;">
+                    <div class="post-preview">
+                        <a href="post.html">
+                            <h3 class="post-title">
+                                在這裡當個好的假字
+                            </h3>
+                            <h3 class="post-subtitle">
+                                在這裡當個好的假字
+                            </h3>
+                        </a>
+                        <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
+                    </div>
+                    <hr style="border-top: 1px solid #ccc;">
+                    <!-- Pager -->
                 </div>
-                <div class="row">
-                    <hr style="width: 100%; border-top: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="container col-lg-7 col-md-7 col-xs-10 col-xs-offset-1 " style="margin-top: 10px; border-style: solid; border-width: 1px; border-radius:20px; border-color:#aaa; background-color: #f8f8f8;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="post-preview col-lg-10 col-xs-offset-1">
+                            <h1 class="post-title">
+                                課程發文
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr class="col-lg-12" style="padding-right:0; padding-left:0;border-top: 1px solid #ccc;">
+                    </div>
+                    <div class="row">
+                        <div class="post-preview  col-sm-10 col-sm-offset-1">
+                            <a href="post.html">
+                                <h2 class="post-title">
+                                    課程影片
+                                </h2>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9ZfN87gSjvI"></iframe>
+                                </div>
+
+                            </a>
+                            <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr class="col-lg-12" style="padding-right:0; padding-left:0;border-top: 1px solid #ccc;">
+                    </div>
+                    <div class="row">
+                        <div class="post-preview  col-sm-10 col-sm-offset-1">
+                            <a href="post.html">
+                                <h2 class="post-title">
+                                    全新課程 !!
+                                </h2>
+                                <h3 class="post-subtitle">
+                                    六月底將會有全新課程，請敬請期待。
+                                </h3>
+                            </a>
+                            <p class="post-meta">Posted by <a href="#">TA</a> on September 18, 2014</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr class="col-lg-12" style="padding-right:0; padding-left:0;border-top: 1px solid #ccc;">
+                    </div>
+                    <div class="row">
+                        <div class="post-preview  col-sm-10 col-sm-offset-1">
+                            <a href="post.html">
+                                <h2 class="post-title">
+                                    課程取消 !
+                                </h2>
+                                <h3 class="post-subtitle">
+                                   6/26 的課程應位老師嚴重感冒而暫停。
+                                </h3>
+                            </a>
+                            <p class="post-meta">Posted by <a href="#">TA</a> on August 24, 2014</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr class="col-lg-12" style="padding-right:0; padding-left:0;border-top: 1px solid #ccc;">
+                    </div>
+                    <div class="row">
+                        <div class="post-preview  col-sm-10 col-sm-offset-1">
+                            <a href="post.html">
+                                <h2 class="post-title">
+                                    6/26 的課程講義已經可以下載
+                                </h2>
+                                <h3 class="post-subtitle">
+                                    6/26 的課程講義已經可以下載囉~
+                                </h3>
+                            </a>
+                            <p class="post-meta">Posted by <a href="#">TA</a> on July 8, 2014</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr class="col-lg-12" style="padding-right:0; padding-left:0;border-top: 1px solid #ccc;">
+                    </div>
+                    <!-- Pager -->
+                    <ul class="pager">
+                        <li>
+                            <a>1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li>
+                    </ul>
+                    <br>
                 </div>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h3 class="post-title">
-                            Design pattern learning
-                        </h3>
-                        <h3 class="post-subtitle">
-                            Design pattern learning
-                        </h3>
-                    </a>
-                    <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
-                </div>
-                <hr style="border-top: 1px solid #ccc;">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h3 class="post-title">
-                            Design pattern learning
-                        </h3>
-                        <h3 class="post-subtitle">
-                            Design pattern learning
-                        </h3>
-                    </a>
-                    <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
-                </div>
-                <hr style="border-top: 1px solid #ccc;">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h3 class="post-title">
-                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Design pattern learning
-                        </h3>
-                        <h3 class="post-subtitle">
-                            Design pattern learning
-                        </h3>
-                    </a>
-                    <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
-                </div>
-                <hr style="border-top: 1px solid #ccc;">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h3 class="post-title">
-                            Design pattern learning
-                        </h3>
-                        <h3 class="post-subtitle">
-                            Design pattern learning
-                        </h3>
-                    </a>
-                    <p class="post-meta">Hosted by <a href="#">Dr. Lin</a> 06/26 ~ 07/10</p>
-                </div>
-                <hr style="border-top: 1px solid #ccc;">
-                <!-- Pager -->
             </div>
         </div>
     </div>
-    <!-- Main Content -->
-    <div class="container col-lg-7 col-md-7 col-xs-10 col-xs-offset-1" style="margin-top: 10px; border-style: solid; border-width: 1px; border-radius:20px; border-color:#aaa; background-color: #f8f8f8;">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="post-preview col-lg-10 col-xs-offset-1">
-                        <h1 class="post-title">
-                                發文
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <hr class="col-lg-12" style="padding-right:0; padding-left:0;border-top: 1px solid #ccc;">
-                </div>
-                <div class="row">
-                    <div class="post-preview  col-lg-10 col-xs-offset-1">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                Class Video
-                            </h2>
-                            <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9ZfN87gSjvI"></iframe>
-                            </div>
-
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-                    </div>
-                </div>
-                <hr class="col-lg-11" style="border-top: 1px solid #ccc;">
-                <div class="row">
-                    <div class="post-preview  col-lg-10 col-xs-offset-1">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                New Class !!
-                            </h2>
-                            <h3 class="post-subtitle">
-                                We are going to hold a new class in July. Please we will send former information to your email.
-                            </h3>
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">TA</a> on September 18, 2014</p>
-                    </div>
-                </div>
-                <hr class="col-lg-11" style="border-top: 1px solid #ccc;">
-                <div class="row">
-                    <div class="post-preview  col-lg-10 col-xs-offset-1">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                Class cancelled !
-                            </h2>
-                            <h3 class="post-subtitle">
-                                Class in 6/26 has been cancelled, because the teacher caught a serious cold.
-                            </h3>
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">TA</a> on August 24, 2014</p>
-                    </div>
-                </div>
-                <hr class="col-lg-11" style="border-top: 1px solid #ccc;">
-                <div class="row">
-                    <div class="post-preview  col-lg-10 col-xs-offset-1">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                Class handout on 6/26 is avaliable now!
-                            </h2>
-                            <h3 class="post-subtitle">
-                                Class handout on 6/26 is avaliable now! You can check the following url to download.
-                            </h3>
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">TA</a> on July 8, 2014</p>
-                    </div>
-                </div>
-                <hr class="col-lg-11" style="border-top: 1px solid #ccc;">
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="#">&larr; Later Posts</a>
-                    </li>
-                    <li>
-                        <a>1</a>
-                    </li>
-                    <li>
-                        <a>2</a>
-                    </li>
-                    <li>
-                        <a>3</a>
-                    </li>
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-                <br>
+    <footer>
+        <div class="container">
+            <div class="col-xs-12">
+                    <hr style="width: 100%; border-top: 1px solid #ccc; margin-top:50px;">
+                <span class="copyright text-muted">Richard 2017</span>
             </div>
         </div>
-    </div>
-
+    </footer>
     <!-- Footer -->
     <!-- <footer>
         <div class="container">
@@ -282,19 +446,6 @@
             </div>
         </div>
     </footer>-->
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
 
 </body>
 
