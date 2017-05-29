@@ -20,10 +20,6 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>
-    new WOW().init();
-    </script>
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -38,154 +34,11 @@
     <link href="css/clean-blog.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="css/info.css" rel="stylesheet">
 </head>
-<style type="text/css">
-h1,
-h2,
-h3 {
-    font-family: "source-han-sans-traditional";
-}
-
-.post-tag {
-    font-family: "source-han-sans-traditional";
-    left: 10px;
-    font-size: 20px;
-    text-align: center;
-    padding: 3px 10px;
-    font-weight: 600;
-    border-style: solid;
-    border-color: #525252;
-    border-radius: 15px;
-}
-
-.carousel-inner>.item>a>img,
-.carousel-inner>.item>img {
-    line-height: 1;
-    background-size: cover;
-    width: 100%;
-}
-
-.middle {
-    position: absolute;
-    transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-}
-
-.downward {
-    -webkit-animation-name: downward;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-    /* Safari 4.0 - 8.0 */
-    animation-name: downward;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-}
-
-.services-box {
-    padding-top: 30px;
-    text-align: left;
-}
-
-.services-box-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
-    background: #ff8a38;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #ffb24b 0%, #ff8a38 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb24b), color-stop(100%, #ff8a38));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #ffb24b 0%, #ff8a38 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #ffb24b 0%, #ff8a38 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #ffb24b 0%, #ff8a38 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #ffb24b 0%, #ff8a38 100%);
-    /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffb24b', endColorstr='#ff8a38', GradientType=0);
-    /* IE6-9 */
-    font-size: 40px;
-    color: #fff;
-    line-height: 80px;
-    text-align: center;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -o-transition: all .6s;
-    -moz-transition: all .6s;
-    -webkit-transition: all .6s;
-    -ms-transition: all .6s;
-    transition: all .6s;
-}
-
-.btn {
-    border-color: #aaa;
-    border-radius: 10px;
-    transition: all .2s;
-}
-
-.btn:hover {
-    color: white;
-    background-color: #aaa;
-}
-
-@keyframes downward {
-    0% {
-        transform: translate(0, 0%);
-    }
-    50% {
-        transform: translate(0, -50%);
-    }
-    100% {
-        transform: translate(0, 0%);
-    }
-}
-
-@media only screen and (max-width: 992px) {}
-
-@media screen and (min-width: 768px) {
-    .carousel-caption {
-        right: 20%;
-        left: 20%;
-        padding-bottom: 30px;
-        top: 50%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .middle {
-        opacity: 1;
-        transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-    }
-    .middle hr {
-        margin-top: 4px;
-        margin-bottom: 4px;
-    }
-    .middle p {
-        margin-top: 4px;
-        margin-bottom: 4px;
-    }
-    .downward {
-        display: none;
-    }
-}
-</style>
 <script type="text/javascript">
 $(function() {
     jQuery(document).ready(function() {
-        new WOW().init();
         $('.carousel').carousel({
             interval: 4000
         });
@@ -200,34 +53,6 @@ $(function() {
 </script>
 
 <body>
-    <!-- Navigation -->
-    <!--     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="index.html">Class Blog</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="post.html">Sample Post</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
     <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top topper nav-modified" style="z-index: 10002;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -248,243 +73,208 @@ $(function() {
         </div>
     </nav>
     <div class="row" style="width:100%; height:50px;"></div>
-    <div class="intro-heade" style="margin:0;">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <a href="#"><img src="img/home-bg.jpg" style="background-size: cover;" alt="Chania">
-                        <div class="carousel-caption middle">
-                            <h1>台科大課程</h1>
-                            <hr>
-                            <p>台科大課程，都在這裡</p>
-                            <span class="fa fa-chevron-down fa-2x downward" style="color:white" aria-hidden="true"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="img/home-bg.jpg" alt="Chicago">
-                        <div class="carousel-caption middle">
-                            <h1>台科大課程</h1>
-                            <hr>
-                            <p>台科大課程，都在這裡</p>
-                            <span class="fa fa-chevron-down fa-2x downward" style="color:white" aria-hidden="true"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="img/home-bg.jpg" alt="New York">
-                        <div class="carousel-caption middle">
-                            <h1>台科大課程</h1>
-                            <hr>
-                            <p>台科大課程，都在這裡</p>
-                            <span class="fa fa-chevron-down fa-2x downward" style="color:white" aria-hidden="true"></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
+    <main class="cd-main-content">
+        <div class="cd-fixed-bg cd-bg-1">
+            <h2 style="text-align:center;">Welcome to this Class</h2>
+            <hr style="height:1px;border:none;background-color:#aaa; margin-top:60px;">
         </div>
-    </div>
-    <div>
-        <div class="container">
-            <div style="width:100%; height:50px;"></div>
-            <div class="row">
-                <div class="col-xs-8 col-xs-offset-2 wow fadeInDown" style="text-align:center">
-                    <h2>這堂課在教什麼?</h2></div>
-                <hr class="col-xs-4 col-xs-offset-4 wow fadeInUp" style="padding:0;height:1px;border:none;color:#aaa;background-color:#333;">
-            </div>
-            <div style="width:100%; height:50px;"></div>
-            <div class="row">
-                <div class="col-md-4 wow fadeInUp" style="text-align:center">
-                    <div class="col-sm-4">
-                        <div class="services-box-icon wow zoomIn">
-                            <i class="fa fa-magic fa-lg"></i>
+        <!-- cd-fixed-bg -->
+        <div class="cd-scrolling-bg">
+            <div class="container" id="here">
+                <div style="width:100%; height:50px;"></div>
+                <div class="row">
+                    <div class="wow col-xs-8 col-xs-offset-2 fadeInDown" style="text-align:center">
+                        <h2>這堂課在教什麼?</h2></div>
+                    <hr class="wow col-xs-4 col-xs-offset-4 fadeInUp" style="padding:0;height:1px;border:none;color:#aaa;background-color:#333;">
+                </div>
+                <div style="width:100%; height:50px;"></div>
+                <div class="row">
+                    <div class="wow col-md-4 fadeInUp" style="text-align:center">
+                        <div class="col-sm-4">
+                            <div class="wow services-box-icon zoomIn">
+                                <i class="fa fa-magic fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3>Lesson 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <h3>Lesson 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 wow fadeInDown" style="text-align:center">
-                    <div class="col-sm-4">
-                        <div class="services-box-icon  wow zoomIn">
-                            <i class="fa fa-magic fa-lg"></i>
+                    <div class="wow col-md-4 fadeInDown" style="text-align:center">
+                        <div class="col-sm-4">
+                            <div class="wow services-box-icon  zoomIn">
+                                <i class="fa fa-magic fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3>Lesson 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <h3>Lesson 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 wow fadeInUp" style="text-align:center">
-                    <div class="col-sm-4">
-                        <div class="services-box-icon  wow zoomIn">
-                            <i class="fa fa-magic fa-lg"></i>
+                    <div class="wow col-md-4 fadeInUp" style="text-align:center">
+                        <div class="col-sm-4">
+                            <div class="wow services-box-icon zoomIn">
+                                <i class="fa fa-magic fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3>Lesson 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <h3>Lesson 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 wow fadeInUp" style="text-align: center">
-                    <a class="btn" style="display: inline-block; text-align: center;" href="#">Load more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="width:100%; height:50px;"></div>
-    <div style="width:100; background-color:#f8f8f8">
-        <div style="width:100%; height:50px;"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 wow fadeInDown">
-                    <h3>Try our great support!</h3>
-                    <hr style="height:1px;border:none;background-color:#aaa;">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <div class="col-md-5 wow fadeInDown" style="vertical-align:middle;">
-                    <h3>課程影片</h3>
-                    <hr style="height:1px;border:none;background-color:#aaa;">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9ZfN87gSjvI"></iframe>
+                <div class="row">
+                    <div class="wow col-sm-12 fadeInUp" style="text-align: center; margin-top:20px;">
+                        <a class="btn" style="display: inline-block; text-align: center;" href="index.html">See more</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div style="width:100%; height:50px;"></div>
-    </div>
-    <div style="width:100%; height:50px;"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+        <div class="cd-fixed-bg cd-bg-2">
+            <h2 style="text-align:center;">課程介紹</h2>
+            <hr style="height:1px;border:none;background-color:#aaa; margin-top:60px;">
+        </div>
+        <!-- cd-fixed-bg -->
+        <div class="cd-scrolling-bg" style="width:100; background-color:#f8f8f8">
+            <div class="container">
+                <div class="row">
+                    <div class="wow col-md-7 fadeInDown">
+                        <h3>Try our great support!</h3>
+                        <hr style="height:1px;border:none;background-color:#aaa;">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="col-md-5 wow fadeInDown" style="vertical-align:middle;">
+                        <h3>課程影片</h3>
+                        <hr style="height:1px;border:none;background-color:#aaa;">
+                        <div class="videoWrapper" style="margin-top:30px;">
+                            <iframe width="854" height="480" src="https://www.youtube.com/embed/2HDpTIMg-Pw" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="wow col-sm-12 fadeInUp" style="text-align: center; margin-top:20px;">
+                        <a class="btn" style="display: inline-block; text-align: center;" href="index.html">See more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cd-fixed-bg cd-bg-3">
             <h2 style="text-align:center;">近期活動</h2>
-            <hr style="height:1px;border:none;background-color:#aaa;">
-            </div>
+            <hr style="height:1px;border:none;background-color:#aaa; margin-top:60px;">
         </div>
-    </div>
-    <div style="width:100;">
-        <section id="cd-timeline" class="cd-container" style=" margin-top:0;">
-            <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-picture wow zoomIn">
-                    <i class="fa fa-magic fa-lg"></i>
-                </div>
-                <!-- cd-timeline-img -->
-                <div class="cd-timeline-content wow fadeInDown">
-                    <h2>Title of section 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <span class="cd-date">Jan 14</span>
-                </div>
-                <!-- cd-timeline-content -->
+        <!-- cd-fixed-bg -->
+        <div class="cd-scrolling-bg">
+            
+            <div style="width:100;">
+                <section id="cd-timeline" class="cd-container" style=" margin-top:0;">
+                    <div class="cd-timeline-block">
+                        <div class="wow cd-timeline-img cd-picture zoomIn">
+                            <i class="fa fa-magic fa-lg"></i>
+                        </div>
+                        <!-- cd-timeline-img -->
+                        <div class="wow cd-timeline-content fadeInDown">
+                            <h2>Title of section 1</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                            <a href="index.html" class="cd-read-more">Read more</a>
+                            <span class="cd-date">Jan 14</span>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                    <div class="cd-timeline-block">
+                        <div class="wow cd-timeline-img cd-movie zoomIn">
+                            <i class="fa fa-magic fa-lg"></i>
+                        </div>
+                        <!-- cd-timeline-img -->
+                        <div class="wow cd-timeline-content fadeInDown">
+                            <h2>Title of section 2</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+                            <a href="index.html" class="cd-read-more">Read more</a>
+                            <span class="cd-date">Jan 18</span>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                    <div class="cd-timeline-block">
+                        <div class="wow cd-timeline-img cd-picture zoomIn">
+                            <i class="fa fa-magic fa-lg"></i>
+                        </div>
+                        <!-- cd-timeline-img -->
+                        <div class="wow cd-timeline-content fadeInDown">
+                            <h2>Title of section 3</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+                            <a href="index.html" class="cd-read-more">Read more</a>
+                            <span class="cd-date">Jan 24</span>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                    <div class="cd-timeline-block">
+                        <div class="wow cd-timeline-img cd-location zoomIn">
+                            <i class="fa fa-magic fa-lg"></i>
+                        </div>
+                        <!-- cd-timeline-img -->
+                        <div class="wow cd-timeline-content fadeInDown">
+                            <h2>Title of section 4</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                            <a href="index.html" class="cd-read-more">Read more</a>
+                            <span class="cd-date">Feb 14</span>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                    <div class="cd-timeline-block">
+                        <div class="wow cd-timeline-img cd-location zoomIn">
+                            <i class="fa fa-magic fa-lg"></i>
+                        </div>
+                        <!-- cd-timeline-img -->
+                        <div class="wow cd-timeline-content fadeInDown">
+                            <h2>Title of section 5</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+                            <a href="index.html" class="cd-read-more">Read more</a>
+                            <span class="cd-date">Feb 18</span>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                    <div class="cd-timeline-block">
+                        <div class="wow cd-timeline-img cd-movie zoomIn">
+                            <i class="fa fa-magic fa-lg"></i>
+                        </div>
+                        <!-- cd-timeline-img -->
+                        <div class="wow cd-timeline-content fadeInDown">
+                            <h2>Final Section</h2>
+                            <p>This is the content of the last section</p>
+                            <span class="cd-date">Feb 26</span>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                </section>
+                <!-- cd-timeline -->
             </div>
-            <!-- cd-timeline-block -->
-            <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-movie wow zoomIn">
-                    <i class="fa fa-magic fa-lg"></i>
+            <footer>
+                <div class="container">
+                    <div class="col-xs-12">
+                        <hr style="width: 100%; border-top: 1px solid #ccc; margin-top:50px;">
+                        <span class="copyright text-muted">Richard 2017</span>
+                    </div>
                 </div>
-                <!-- cd-timeline-img -->
-                <div class="cd-timeline-content wow fadeInDown">
-                    <h2>Title of section 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <span class="cd-date">Jan 18</span>
-                </div>
-                <!-- cd-timeline-content -->
-            </div>
-            <!-- cd-timeline-block -->
-            <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-picture wow zoomIn">
-                    <i class="fa fa-magic fa-lg"></i>
-                </div>
-                <!-- cd-timeline-img -->
-                <div class="cd-timeline-content wow fadeInDown">
-                    <h2>Title of section 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <span class="cd-date">Jan 24</span>
-                </div>
-                <!-- cd-timeline-content -->
-            </div>
-            <!-- cd-timeline-block -->
-            <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-location wow zoomIn">
-                    <i class="fa fa-magic fa-lg"></i>
-                </div>
-                <!-- cd-timeline-img -->
-                <div class="cd-timeline-content wow fadeInDown">
-                    <h2>Title of section 4</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <span class="cd-date">Feb 14</span>
-                </div>
-                <!-- cd-timeline-content -->
-            </div>
-            <!-- cd-timeline-block -->
-            <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-location wow zoomIn">
-                    <i class="fa fa-magic fa-lg"></i>
-                </div>
-                <!-- cd-timeline-img -->
-                <div class="cd-timeline-content wow fadeInDown">
-                    <h2>Title of section 5</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <span class="cd-date">Feb 18</span>
-                </div>
-                <!-- cd-timeline-content -->
-            </div>
-            <!-- cd-timeline-block -->
-            <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-movie wow zoomIn">
-                    <i class="fa fa-magic fa-lg"></i>
-                </div>
-                <!-- cd-timeline-img -->
-                <div class="cd-timeline-content wow fadeInDown">
-                    <h2>Final Section</h2>
-                    <p>This is the content of the last section</p>
-                    <span class="cd-date">Feb 26</span>
-                </div>
-                <!-- cd-timeline-content -->
-            </div>
-            <!-- cd-timeline-block -->
-        </section>
-        <!-- cd-timeline -->
-    </div>
-    <footer>
-        <div class="container">
-            <div class="col-xs-12">
-                <hr style="width: 100%; border-top: 1px solid #ccc; margin-top:50px;">
-                <span class="copyright text-muted">Richard 2017</span>
-            </div>
+            </footer>
         </div>
-    </footer>
+    </main>
 </body>
+<script src="js/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
 
 </html>

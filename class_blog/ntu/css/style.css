@@ -3,37 +3,11 @@
 Primary style
 
 -------------------------------- */
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-body {
-  font-size: 100%;
-  font-family: "Droid Serif", serif;
-  color: #7f8c97;
-  background-color: #e9f0f5;
-}
-
-a {
-  color: #acb7c0;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-}
-
-img {
-  max-width: 100%;
-}
-
-h1, h2 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
 }
 
 /* -------------------------------- 
@@ -271,8 +245,8 @@ header h1 {
   color: #303e49;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  font-size: 13px;
-  font-size: 0.8125rem;
+  font-size: 20px;
+  font-size: 1.75rem;
 }
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
@@ -313,11 +287,15 @@ header h1 {
   }
   .cd-timeline-content p {
     font-size: 16px;
+    font-size: 1.75rem;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content{
+    font-size: 14px;
     font-size: 1.5rem;
   }
-  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  .cd-date {
     font-size: 14px;
-    font-size: 1rem;
+    font-size: 2.5rem;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -493,4 +471,85 @@ header h1 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.cd-fixed-bg *, .cd-fixed-bg * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("../img/contact-bg.jpg");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("../img/home-bg.jpg");
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("../img/post-bg.jpg");
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("../img/contact-bg.jpg");
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 36px;
+  }
+}
+
+.cd-fixed-bg {
+  background-attachment: fixed;
+}
+.cd-fixed-bg h1, .cd-fixed-bg h2 {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color-1 {
+  background-color: #3d3536;
+  color: #a6989a;
+}
+.cd-scrolling-bg.cd-color-2 {
+  background-color: #99a478;
+  color: #3d3536;
+}
+.cd-scrolling-bg.cd-color-3 {
+  background-color: #b4d7a8;
+  color: #3d3536;
+}
+
+.cd-main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
